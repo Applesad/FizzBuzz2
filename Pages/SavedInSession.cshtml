@@ -1,0 +1,16 @@
+﻿@page
+@model SavedInSessionModel
+@{
+    ViewData["Title"] = "Data in session";
+}
+    
+   
+@if (Model.Fizzlist != null)
+    {
+        <p>Dane w zapisane w sesji:</p>
+        for(int i=0;i<Model.Fizzlist.Count();i++)
+        {
+            <p>@Model.Fizzlist[i].Number: @Model.Fizzlist[i].Powiadomienie</p>
+
+        }
+    }
